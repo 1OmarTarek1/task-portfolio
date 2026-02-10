@@ -1,0 +1,82 @@
+@media screen and (max-width: 991px) {
+
+    /* Hero Section */
+    #heroSection {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 50px;
+        height: auto;
+        padding-top: 120px;
+    }
+
+    #heroSection .heroContent {
+        align-items: center;
+        text-align: center;
+    }
+
+    #heroSection .heroContent .btnGroup {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* Hero Section */
+    #heroSection {
+        padding-top: 40px;
+        /* Reset padding since nav is static/stacked */
+    }
+
+    #heroSection .heroContent::before {
+        left: 50%;
+    }
+
+    #heroSection .heroContent .subtitle {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #heroSection .heroContent .title {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #heroSection .heroContent .profession {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    #heroSection .heroImgWrapper img {
+        max-width: 300px;
+        position: relative;
+        top: 7px;
+
+    }
+
+    #heroSection .heroImgWrapper::before {
+        width: 350px;
+        height: 350px;
+    }
+
+    #heroSection .heroContent .shortCutInfo {
+        gap: 15px;
+        padding: 15px;
+        flex-direction: row;
+        /* Keep row but wrap if needed, or scale down */
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #heroSection .heroContent .profession {
+        font-size: 28px;
+    }
+
+    #heroSection .heroContent .shortCutInfo {
+        gap: 20px;
+    }
+
+    #heroSection .heroContent .shortCutInfo .infoItem:nth-child(2) {
+        padding: 0px 15px;
+    }
+}

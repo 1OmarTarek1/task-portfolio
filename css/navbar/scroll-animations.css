@@ -1,0 +1,99 @@
+#heroSection {
+    view-timeline-name: --hero-timeline;
+    view-timeline-axis: block;
+}
+
+#services {
+    view-timeline-name: --services-timeline;
+    view-timeline-axis: block;
+}
+
+#about {
+    view-timeline-name: --about-timeline;
+    view-timeline-axis: block;
+}
+
+#projects {
+    view-timeline-name: --projects-timeline;
+    view-timeline-axis: block;
+}
+
+#contact {
+    view-timeline-name: --contact-timeline;
+    view-timeline-axis: block;
+}
+
+@keyframes linkActivate {
+
+    0%,
+    100% {
+        color: var(--font-color);
+        border-bottom: 2px solid transparent;
+    }
+
+    40%,
+    60% {
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+    }
+}
+
+#navbar ul li a {
+    border-bottom: 1px solid transparent;
+}
+
+#navbar ul li a[href="#heroSection"] {
+    animation: linkActivate linear;
+    animation-timeline: --hero-timeline;
+    animation-range: entry 25% exit 75%;
+}
+
+#navbar ul li a[href="#services"] {
+    animation: linkActivate linear;
+    animation-timeline: --services-timeline;
+    animation-range: entry 25% exit 75%;
+}
+
+#navbar ul li a[href="#about"] {
+    animation: linkActivate linear;
+    animation-timeline: --about-timeline;
+    animation-range: entry 25% exit 75%;
+}
+
+#navbar ul li a[href="#projects"] {
+    animation: linkActivate linear;
+    animation-timeline: --projects-timeline;
+    animation-range: entry 25% exit 75%;
+}
+
+#navbar ul li a[href="#contact"] {
+    animation: linkActivate linear;
+    animation-timeline: --contact-timeline;
+    animation-range: entry 25% exit 75%;
+}
+
+
+body:has(#heroSection:target) #navbar ul li a[href="#heroSection"] {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+body:has(#services:target) #navbar ul li a[href="#services"] {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+body:has(#about:target) #navbar ul li a[href="#about"] {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+body:has(#projects:target) #navbar ul li a[href="#projects"] {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+body:has(#contact:target) #navbar ul li a[href="#contact"] {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}

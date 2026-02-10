@@ -1,0 +1,41 @@
+@media screen and (max-width: 991px) {
+
+    /* About Section */
+    #about .aboutContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .aboutContent .aboutText {
+        width: 100%;
+    }
+
+    #about .aboutContent .aboutText .primaryBtn {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* About (Skills) */
+    .skillsContainer {
+        gap: 20px;
+    }
+
+    .skillCard .circle {
+        width: 90px;
+        height: 90px;
+    }
+
+    .skillCard .circle::before {
+        width: 78px;
+        height: 78px;
+    }
+
+    .skillCard .circle .inner {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}

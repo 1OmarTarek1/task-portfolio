@@ -1,0 +1,19 @@
+@media screen and (max-width: 991px) {
+    .formIoBtn {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* Contact */
+    #contact .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    /* #contact .formGroup.fullHeight removed as it was empty */
+
+    #contact textarea {
+        height: 120px;
+    }
+}

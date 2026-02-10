@@ -1,0 +1,131 @@
+@media screen and (max-width: 991px) {
+
+    /* Navbar */
+    #navbar {
+        padding-inline: 50px;
+    }
+
+    #navbar ul {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #navbar .hireBtn {
+        display: none;
+    }
+
+    #navbar .mobileMenu {
+        display: flex;
+    }
+
+    #navbar .mobIco {
+        display: inline;
+    }
+
+    /* Navbar */
+    /* ---------------------- first step ---------------------- */
+    #navbar {
+        padding-inline: 25px;
+    }
+
+    #navbar .mobileLinks {
+        align-items: flex-start;
+        gap: 0;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 50%;
+        transform: translate(-50%, calc(-100% - 5px));
+        width: calc(100% - 50px);
+        z-index: -1;
+        background-color: #111111f6;
+        border-inline: 1px solid #ffffff0c;
+        border-radius: 5px;
+    }
+
+    #navbar:has(:not(.menuToggle:checked)) .mobileLinks li {
+        width: 100%;
+    }
+
+    #navbar:has(:not(.menuToggle:checked)) .mobileLinks li a {
+        display: flex;
+        width: 100%;
+        padding: 9px 15px;
+        border-bottom: 1px solid #ffffff0c;
+        align-items: center;
+        gap: 10px;
+        color: var(--font-secColor);
+        font-size: 12px;
+    }
+
+    #navbar:has(:not(.menuToggle:checked)) .mobileLinks li:hover a {
+        background-color: #ff000022;
+        border-bottom-color: var(--primary-color);
+    }
+
+    #navbar:has(:not(.menuToggle:checked)) .mobileLinks li:last-child a {
+        border-radius: 0 0 5px 5px;
+    }
+
+    #navbar:has(:not(.menuToggle:checked)) .mobileLinks li:first-child a {
+        border-top: 1px solid #ffffff0c;
+        border-radius: 5px 5px 0 0;
+    }
+
+    /* ---------------------- active class ---------------------- */
+    #navbar:has(:not(.menuToggle:checked)) .mobileLinks li:has(a.active) {
+        background-color: var(--primary-color);
+    }
+
+    #navbar:has(:not(.menuToggle:checked)) .mobileLinks li:has(a.active) a {
+        color: var(--font-color);
+    }
+
+
+
+    /* ---------------------- second step ---------------------- */
+    #navbar:has(.menuToggle:checked) .mobileLinks {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translate(-50%, 0);
+    }
+
+    /*start toggle btn*/
+    .menuToggle {
+        display: none;
+    }
+
+    .menuBtn {
+        width: 20px;
+        height: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .menuBtn .bar {
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 5px;
+        transition: 0.3s ease;
+    }
+
+    .menuToggle:checked+.menuBtn .bar:nth-child(1) {
+        transform: translate(0px, 7px) rotate(45deg);
+    }
+
+    .menuToggle:checked+.menuBtn .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menuToggle:checked+.menuBtn .bar:nth-child(3) {
+        transform: translate(0px, -6px) rotate(-45deg);
+    }
+}

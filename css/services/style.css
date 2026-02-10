@@ -1,0 +1,67 @@
+/* =============== START SERVICES ================= */
+#services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#services h2 {
+    font-size: 30px;
+}
+
+#services .subtitle {
+    font-size: 16px;
+    color: var(--font-secColor);
+    text-align: center;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+#services .cardsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    transition: var(--transition);
+}
+
+#services .serCard {
+    flex: 1 1 calc(33.333% - 40px);
+    background-color: var(--background-component);
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+#services .cardsContainer:hover .serCard:not(:hover) {
+    opacity: 0.6;
+    filter: blur(3px);
+}
+
+
+#services .serCard:hover {
+    transform: translateY(-10px);
+}
+
+#services .serCard .serCardHead {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#services .serCard .serCardTitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#services .serCard .serCardDesc {
+    font-size: 14px;
+    color: var(--font-secColor);
+}
+
+/* =============== END SERVICES ================= */

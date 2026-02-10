@@ -1,0 +1,21 @@
+@media screen and (max-width: 991px) {
+
+    /* Global Overrides */
+    section,
+    header,
+    footer,
+    nav {
+        padding: 60px 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* Global Overrides */
+    section,
+    header,
+    footer,
+    nav {
+        padding: 50px 25px;
+    }
+}

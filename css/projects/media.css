@@ -1,0 +1,21 @@
+@media screen and (max-width: 767px) {
+
+    /* Portfolio */
+    .cardsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .cardsContainer .porCard {
+        flex: 1;
+        min-width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cardsContainer .porCard {
+        min-width: 100%;
+    }
+}

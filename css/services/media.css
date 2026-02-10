@@ -1,0 +1,12 @@
+@media screen and (max-width: 767px) {
+
+    /* Services */
+    #services .cardsContainer {
+        gap: 15px;
+        align-items: unset;
+    }
+
+    #services .serCard {
+        flex: 1;
+    }
+}

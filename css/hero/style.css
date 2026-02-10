@@ -1,0 +1,246 @@
+/* ========== START HERO SECTION CSS STYLE ========== */
+#heroSection {
+    height: 100dvh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+
+#heroSection .heroContent {
+    flex: 1;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#heroSection .heroContent::before {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 300px;
+    height: 300px;
+    background-color: var(--primary-color);
+
+    border-radius: 72% 28% 60% 40% / 40% 60% 30% 70%;
+
+    box-shadow:
+        0 0 60px rgba(253, 26, 26, 0.6),
+        0 0 120px rgba(253, 26, 26, 0.4),
+        0 0 220px rgba(253, 26, 26, 0.25);
+
+    filter: blur(16px);
+    opacity: 0.2;
+    z-index: -1;
+    pointer-events: none;
+
+    animation: blobDeep 18s ease-in-out infinite;
+}
+
+@keyframes blobDeep {
+    0% {
+        border-radius: 72% 28% 60% 40% / 40% 60% 30% 70%;
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+
+    33% {
+        border-radius: 30% 70% 25% 75% / 70% 30% 65% 35%;
+        transform: translate(-50%, -50%) rotate(120deg) scale(1.08);
+    }
+
+    66% {
+        border-radius: 80% 20% 70% 30% / 25% 75% 40% 60%;
+        transform: translate(-50%, -50%) rotate(240deg) scale(0.94);
+    }
+
+    100% {
+        border-radius: 72% 28% 60% 40% / 40% 60% 30% 70%;
+        transform: translate(-50%, -50%) rotate(360deg) scale(1);
+    }
+}
+
+
+
+#heroSection .heroContent .subtitle {
+    text-align: start;
+    font-size: 18px;
+    margin-bottom: 0px;
+    color: var(--font-secColor);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid transparent;
+    width: 6.5ch;
+    /* Reduced from 9ch to 7ch for tighter cursor */
+    animation:
+        typing 0.8s steps(7) backwards,
+        /* Adjusted steps to 7 */
+        blink-caret 0.5s step-end infinite,
+        hide-caret 0s linear 0.8s forwards;
+}
+
+#heroSection .heroContent .title {
+    text-align: start;
+    font-size: 23px;
+    font-weight: normal;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid transparent;
+    width: 18ch;
+    /* 'Omar Tarek Mohamed' = 18 + buffer */
+    animation:
+        typing 1.8s steps(18) backwards 1s,
+        blink-caret 0.5s step-end infinite 1s,
+        hide-caret 0s linear 2.8s forwards;
+}
+
+#heroSection .heroContent .profession {
+    text-align: start;
+    font-size: 50px;
+    color: var(--primary-color);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid transparent;
+    width: 17ch;
+    /* Reduced from 21ch to 19ch */
+    animation:
+        typing 2s steps(20) backwards 3s,
+        blink-caret 0.5s step-end infinite 3s,
+        hide-caret 0s linear 5s forwards;
+}
+
+#heroSection .heroContent .media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-block: 20px 60px;
+}
+
+#heroSection .heroContent .media li a {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    color: var(--font-secColor);
+    border: 1px dashed var(--font-secColor);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+#heroSection .heroContent .media li a:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--font-color);
+}
+
+#heroSection .heroContent .media li a i {
+    font-size: 16px !important;
+    position: relative;
+    top: 1px;
+}
+
+#heroSection .heroContent .media li:last-child a i {
+    font-size: 20px !important;
+}
+
+
+#heroSection .heroContent .btnGroup {
+    margin-bottom: 60px;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+
+#heroSection .heroContent .shortCutInfo {
+    display: flex;
+    justify-content: center;
+    padding: 20px 25px;
+    background-color: #22222290;
+    border-radius: 5px;
+    font-size: 14px;
+    gap: 30px;
+}
+
+#heroSection .heroContent .shortCutInfo .infoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#heroSection .heroContent .shortCutInfo .infoItem:nth-child(2) {
+    border-inline: 2px solid #ffffff3b;
+    padding: 0 25px;
+}
+
+#heroSection .heroContent .shortCutInfo .infoItem .infoTitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#heroSection .heroContent .shortCutInfo .infoItem .infoSubtitle {
+    font-size: 14px;
+    color: #ffffffa0;
+}
+
+
+/* ------ hero image ------ */
+#heroSection .heroImgWrapper {
+    position: relative;
+    z-index: 0;
+    transform: scale(.9);
+}
+
+#heroSection .heroImgWrapper::before {
+    content: '';
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: var(--background-component);
+    z-index: -1;
+}
+
+#heroSection .heroImgWrapper img {
+    max-width: 400px;
+    height: auto;
+}
+
+/* Typing Animation Keyframes */
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--primary-color)
+    }
+}
+
+@keyframes hide-caret {
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/* ========== END HERO SECTION CSS STYLE ========== */

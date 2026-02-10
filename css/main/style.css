@@ -1,0 +1,139 @@
+/* ========== START MAIN CSS STYLE ========== */
+:root {
+    --primary-color: #fd1a1a;
+    --font-secColor: #fff;
+    --background-body: #111;
+    --background-component: #222;
+    --background-secComponent: #333;
+
+    --font-family: 'tahoma', sans-serif;
+    --font-color: #fff;
+    --font-secColor: #ffffff54;
+    --transition: all ease-in-out 0.3s;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: var(--background-body);
+    color: var(--font-color);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+input:focus,
+button:focus,
+a:focus {
+    outline: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+section,
+header,
+footer,
+nav {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ========== END MAIN CSS STYLE ========== */
+
+/* ========== START BUTTONS COMPONENT ========== */
+.primaryBtn {
+    font-size: 14px;
+    padding: 0px 25px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    font-size: 12px;
+    transition: var(--transition);
+}
+
+.primaryBtn:hover {
+    border-color: var(--font-color);
+    background-color: var(--font-color);
+    color: var(--primary-color);
+}
+
+.secondaryBtn {
+    font-size: 14px;
+    padding: 0px 25px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--font-color);
+    border: 1px solid var(--font-color);
+    border-radius: 5px;
+    font-size: 12px;
+    transition: var(--transition);
+}
+
+.secondaryBtn:hover {
+    background-color: var(--primary-color);
+    border-color: transparent;
+}
+
+.thirdBtn {
+    font-size: 14px;
+    padding: 0px 25px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-component);
+    color: var(--font-color);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: var(--transition);
+}
+
+.thirdBtn:hover {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+}
+
+
+/* ========== END BUTTONS COMPONENT ========== */
