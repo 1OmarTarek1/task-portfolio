@@ -36,19 +36,23 @@ body:has(#theme-toggle:checked) {
     --font-secColor: #666;
 }
 
-/* Theme Toggle Button - CSS only */
+/* Theme Toggle Button - CSS only - checkbox مخفي تماماً */
 .theme-toggle {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+    opacity: 0 !important;
 }
 
 .theme-toggle-label {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,6 +69,15 @@ body:has(#theme-toggle:checked) {
 .theme-toggle-label:hover {
     color: var(--primary-color);
     background: var(--background-secComponent);
+}
+
+.theme-icon-dark,
+.theme-icon-light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
 }
 
 .theme-icon-light {
