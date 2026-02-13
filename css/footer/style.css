@@ -26,7 +26,7 @@
 }
 
 #mainFooter .footerLinks li a {
-    color: #bbbbbb;
+    color: var(--font-secColor);
     font-size: 14px;
     transition: var(--transition);
 }
@@ -46,11 +46,11 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid #444;
+    border: 1px solid var(--border-mid);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #bbbbbb;
+    color: var(--font-secColor);
     transition: var(--transition);
 }
 
@@ -72,25 +72,25 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #bbbbbb;
+    color: var(--font-secColor);
     font-size: 14px;
 }
 
 #mainFooter .footerContactInfo .contactItem i {
-    color: #777;
+    color: var(--font-secColor);
 }
 
 #mainFooter .footerDivider {
     width: 100%;
     max-width: 600px;
     height: 2px;
-    background-color: #333;
+    background-color: var(--background-secComponent);
     margin-bottom: 20px;
 }
 
 #mainFooter .copyright {
     font-size: 12px;
-    color: #666;
+    color: var(--font-secColor);
 }
 
 /* ========== END FOOTER SECTION ========== */

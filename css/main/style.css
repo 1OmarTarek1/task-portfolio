@@ -1,15 +1,87 @@
 /* ========== START MAIN CSS STYLE ========== */
+/* Dark Mode (default) */
 :root {
     --primary-color: #fd1a1a;
-    --font-secColor: #fff;
     --background-body: #111;
     --background-component: #222;
     --background-secComponent: #333;
+    --background-navbar: #111111c6;
+    --background-navbar-dropdown: #111111f6;
+    --background-card-overlay: #22222290;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-mid: rgba(255, 255, 255, 0.23);
+    --placeholder-color: #ffffff50;
+    --focus-border: #ffffff30;
 
     --font-family: 'tahoma', sans-serif;
     --font-color: #fff;
     --font-secColor: #ffffff54;
     --transition: all ease-in-out 0.3s;
+}
+
+/* Light Mode (when toggle is checked) */
+body:has(#theme-toggle:checked) {
+    --background-body: #f5f5f5;
+    --background-component: #fff;
+    --background-secComponent: #e8e8e8;
+    --background-navbar: #ffffffcc;
+    --background-navbar-dropdown: #fffffff6;
+    --background-card-overlay: #ffffff90;
+    --border-subtle: rgba(0, 0, 0, 0.08);
+    --border-mid: rgba(0, 0, 0, 0.2);
+    --placeholder-color: #66666699;
+    --focus-border: #00000030;
+
+    --font-color: #1a1a1a;
+    --font-secColor: #666;
+}
+
+/* Theme Toggle Button - CSS only */
+.theme-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.theme-toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    color: var(--font-color);
+    background: var(--background-component);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.theme-toggle-label:hover {
+    color: var(--primary-color);
+    background: var(--background-secComponent);
+}
+
+.theme-icon-light {
+    display: none;
+}
+
+.theme-icon-dark {
+    display: block;
+}
+
+body:has(#theme-toggle:checked) .theme-icon-light {
+    display: block;
+    color: #f59e0b;
+}
+
+body:has(#theme-toggle:checked) .theme-icon-dark {
+    display: none;
 }
 
 *,
@@ -82,7 +154,7 @@ nav {
     align-items: center;
     justify-content: center;
     background-color: var(--primary-color);
-    color: var(--font-color);
+    color: #fff;
     border-radius: 5px;
     border: 1px solid var(--primary-color);
     font-size: 12px;

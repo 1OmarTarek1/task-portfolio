@@ -164,7 +164,7 @@
     display: flex;
     justify-content: center;
     padding: 20px 25px;
-    background-color: #22222290;
+    background-color: var(--background-card-overlay);
     border-radius: 5px;
     font-size: 14px;
     gap: 30px;
@@ -177,7 +177,7 @@
 }
 
 #heroSection .heroContent .shortCutInfo .infoItem:nth-child(2) {
-    border-inline: 2px solid #ffffff3b;
+    border-inline: 2px solid var(--border-mid);
     padding: 0 25px;
 }
 
@@ -189,7 +189,7 @@
 
 #heroSection .heroContent .shortCutInfo .infoItem .infoSubtitle {
     font-size: 14px;
-    color: #ffffffa0;
+    color: var(--font-secColor);
 }
 
 

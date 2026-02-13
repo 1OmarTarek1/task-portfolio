@@ -60,13 +60,13 @@
 
 #contact input::placeholder,
 #contact textarea::placeholder {
-    color: #ffffff50;
+    color: var(--placeholder-color);
 }
 
 #contact input:focus,
 #contact select:focus,
 #contact textarea:focus {
-    border-color: #ffffff30;
+    border-color: var(--focus-border);
 }
 
 .visually-hidden {

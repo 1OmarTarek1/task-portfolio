@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(5px);
-    background-color: #111111c6;
+    background-color: var(--background-navbar);
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.032);
   border-bottom: 1px solid #fd1a1a23; */
     z-index: 1000;
